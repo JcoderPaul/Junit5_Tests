@@ -1,0 +1,1 @@
+#### Использование аннотаций: @Disable, @RepeatedTest(value, name), @TimeOut(). Работа метода assertTimeout()
