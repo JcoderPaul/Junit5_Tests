@@ -1,0 +1,16 @@
+package com.oldboy.Exception;
+
+import com.oldboy.Validator.Error;
+import lombok.Getter;
+
+import java.util.List;
+
+public class ValidationException extends RuntimeException {
+
+    @Getter
+    private final List<Error> errors;
+
+    public ValidationException(List<Error> errors) {
+        this.errors = errors;
+    }
+}
