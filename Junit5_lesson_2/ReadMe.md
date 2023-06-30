@@ -94,4 +94,4 @@ API launcher находится в модуле junit-platform-launcher.
   Но самое главное, мы смотрим на работу метода *.assertEquals() фреймворка Junit 5 <br><br>
 - Тесты *.loginFailIfPasswordNotCorrect() и *.loginFailIfUserNotExist() проверяют тот же метод *.login(name, pass) при различных ошибках ввода или ввода заведомо несуществующих данных в БД (в списке пользователей).
 
-Схему разработки по TDD см. рис. DOC/TDD.jpg
+Схему разработки по TDD см. рис. [DOC/TDD.jpg](https://github.com/JcoderPaul/Junit5_Tests/blob/master/Junit5_lesson_2/DOC/TDD.jpg)
