@@ -1,0 +1,8 @@
+В случае необходимости запуска тестов из командной строки
+нам понадобится, для удобства, maven-wrapper:
+- описание - https://maven.apache.org/wrapper/
+- GitHub - https://github.com/takari/maven-wrapper
+
+В разделе Maven выберем Execute Maven Goal и запустим команду: mvn wrapper:wrapper
+Проверим установку враппера в терминале, запустив: ./mvnw clean
+Если все прошло нормально то папка target будет удалена.
