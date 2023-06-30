@@ -19,12 +19,11 @@
 - Вместо аннотации @Test необходимо использовать @ParameterizedTest. Такая аннотация позволяет выполнить текущий тест (помеченный @ParameterizedTest) несколько раз, но с разными аргументами.
 - Далее для запуска теста мы должны объявить хотя бы один источник аргументов для теста, т.е. некий source-поставщик (провайдер), который предоставит аргументы для каждого вызова нашего помеченного @ParameterizedTest теста.
 - Параметр name (хотя и необязательный) аннотации @ParameterizedTest позволяет именовать каждый тест для серии аргументов более наглядно (удобно для восприятия) см. тестовый метод demoCsvGetParameterForTest(String name, String pass) класса UserServiceTest. 
-
-    
-    @ParameterizedTest(name = "{arguments} test {index}")
-    void demoCsvGetParameterForTest(String name, String pass) {
-          // some test code
-    }
+      
+      @ParameterizedTest(name = "{arguments} test {index}")
+      void demoCsvGetParameterForTest(String name, String pass) {
+            // some test code
+      }
 
 ### Источники тестовых аргументов
 
