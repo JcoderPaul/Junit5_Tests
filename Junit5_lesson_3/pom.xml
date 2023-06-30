@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.oldboy</groupId>
+    <artifactId>Junit5_lesson_3</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!--
+    Junit 5 состоит из 3-х частей, нам нужен JUnit Jupiter. Однако, даже если
+    установить его и написать простой тест, при запуске Maven в режиме test
+    (в фазе или жизненном цикле - test), мы получим - "тишь и гладь", при 100%
+    провале теста, он проходит без ошибок. Да при ручном запуске он падает, и
+    все же... Чтобы такой ошибки не было, нам нужно переопределить плагин Surefire
+    см. ниже раздел -> <build> -> <plugins>
+    -->
+
+    <dependencies>
+        <!-- Для того чтобы минимизировать написание рутинного кода добавим Lombok -->
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.28</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.10.0-M1</version>
+            <scope>test</scope>
+        </dependency>
+        <!--
+        Данная зависимость и так есть в среде разработки, но мы ее подключим,
+        чтобы написать собственный Launcher класс для запуска всех наших тестов
+        пакетом.
+        -->
+        <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <version>1.10.0-M1</version>
+            <scope>test</scope>
+        </dependency>
+        <!--
+        https://mvnrepository.com/artifact/org.assertj/assertj-core
+        Уязвимости из-за зависимостей:
+            CVE-2023-2976
+            CVE-2023-20863
+            CVE-2023-20861
+        см. https://mvnrepository.com/artifact/org.assertj/assertj-core/3.24.2
+        -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.24.2</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
