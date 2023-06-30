@@ -1,10 +1,10 @@
 ### Немного об AssertJ
 
-Несколько методов в классе UserServiceTest применяют библиотеку AssertJ, в качестве ознакомления. Небольшое описание см. в DOC/AssertJ.txt.  
+Несколько методов в классе [UserServiceTest](https://github.com/JcoderPaul/Junit5_Tests/blob/master/Junit5_lesson_3/src/test/java/com/oldboy/UserServiceTest.java) применяют библиотеку [AssertJ](https://github.com/JcoderPaul/Junit5_Tests/blob/master/Junit5_lesson_3/DOC/AssertJ.txt), в качестве ознакомления. Небольшое описание см. в [DOC/AssertJ.txt](https://github.com/JcoderPaul/Junit5_Tests/blob/master/Junit5_lesson_3/DOC/AssertJ.txt).  
 
 ### Исключения в Junit 5
 
-Методы throwExceptionIfUsernameIsNull() и throwExceptionInAllSituationOnLoginNullableEnter() в классе UserServiceTest.java демонстрируют возможности работы с исключениями, которые пробрасываются методом *.login(name, pass) класса UserService.java (см. короткие комментарии в методах).
+Методы throwExceptionIfUsernameIsNull() и throwExceptionInAllSituationOnLoginNullableEnter() в классе [UserServiceTest.java](https://github.com/JcoderPaul/Junit5_Tests/blob/master/Junit5_lesson_3/src/test/java/com/oldboy/UserServiceTest.java) демонстрируют возможности работы с исключениями, которые пробрасываются методом *.login(name, pass) класса [UserService.java](https://github.com/JcoderPaul/Junit5_Tests/blob/master/Junit5_lesson_3/src/main/java/com.oldboy/UserService.java) (см. короткие комментарии в методах).
 
 ### Теги и фильтры в Junit 5
 
