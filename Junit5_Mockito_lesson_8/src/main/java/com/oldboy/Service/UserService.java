@@ -49,10 +49,8 @@ public class UserService {
                 filter(userFromBase -> userFromBase.getPassword().equals(password)).
                 findFirst();
     }
-    /*
-    Метод создается уже после того, как создан тест на него и мы
-    предполагаем, какие результирующие данные на выходе нам ждать.
-    */
+    
+    /* Метод создается уже после того, как создан тест на него и мы предполагаем, какие результирующие данные на выходе нам ждать. */
     public Map<Integer, User> getAllUsersAndConvertToMapById() {
         /*
         Более короткий способ преобразования - это stream API:
