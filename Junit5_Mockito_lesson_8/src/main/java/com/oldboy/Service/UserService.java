@@ -9,20 +9,18 @@ import com.oldboy.DTO.User;
 import java.util.*;
 
 public class UserService {
-    /*
-    Естественно в реальном проекте мы бы организовали
-    связь с базой и проводили все манипуляции с ней.
-    */
+    
+    /* Естественно в реальном проекте мы бы организовали связь с базой и проводили все манипуляции с ней. */
+    
     private final List<User> testUsersBase = new ArrayList<>();
     private final UserDao userDao;
     public UserService(UserDao userDao) {
         this.userDao = userDao;
     }
+    
     /*
-    В данном случае метод *.delete() текущего класса,
-    зависит от метода *.deleteUser() класса UserDao.
-    Т.е. мы имеем зависимость и при тестировании
-    стандартными методами получим интеграционный тест,
+    В данном случае метод *.delete() текущего класса, зависит от метода *.deleteUser() класса UserDao.
+    Т.е. мы имеем зависимость и при тестировании стандартными методами получим интеграционный тест,
     а не юнит тест.
     */
     public boolean delete(Integer userId){
