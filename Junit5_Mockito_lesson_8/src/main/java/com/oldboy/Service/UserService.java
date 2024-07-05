@@ -23,6 +23,7 @@ public class UserService {
     Т.е. мы имеем зависимость и при тестировании стандартными методами получим интеграционный тест,
     а не юнит тест.
     */
+    
     public boolean delete(Integer userId){
         return userDao.deleteUser(userId);
     }
@@ -36,6 +37,7 @@ public class UserService {
     }
 
     /* Добавим метод списочного добавления пользователей в БД (список) */
+    
     public void addMoreOneUsers(User... users){
         this.testUsersBase.addAll(Arrays.asList(users));
     }
@@ -51,6 +53,7 @@ public class UserService {
     }
     
     /* Метод создается уже после того, как создан тест на него и мы предполагаем, какие результирующие данные на выходе нам ждать. */
+    
     public Map<Integer, User> getAllUsersAndConvertToMapById() {
         /*
         Более короткий способ преобразования - это stream API:
